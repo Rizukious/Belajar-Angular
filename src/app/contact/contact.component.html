@@ -1,0 +1,37 @@
+<!-- Style Css -->
+<style>
+    .contact {
+        display: flex; 
+        flex-direction: row; 
+        border: solid 1px #ccc;
+        border-radius: 4px;
+        max-width: 200px;
+        margin-top: 5px;
+    }
+
+    .id-contact {
+        padding: 10px 20px;
+        background-color: #555;
+        color: white;
+    }
+
+    .name {
+        padding: 10px 20px;
+    }
+</style>
+
+<div style="margin : 0 auto; width: 800px;">
+    <h1>Hello, ini adalah Component Contact</h1>
+    <!-- Memanggil Variable object contact -->
+    <!-- <div class="contact">
+        <div class="id-contact">{{contact.id}}</div>
+        <div class="name">{{contact.name}}</div>
+    </div> -->
+
+    <!-- Memanggil Variable array contacts -->
+    <!-- Menggunakan directive ng for di angular untuk mengulang data -->
+    <div class="contact" *ngFor = "let c of contacts">
+        <div class="id-contact">{{c.id}}</div>
+        <div class="name">{{c.name}}</div>
+    </div>
+</div>
